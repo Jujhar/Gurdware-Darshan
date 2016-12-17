@@ -4,7 +4,9 @@ import React from 'react/addons';
 
 var Grid = React.createClass({
     render() {
-        return (<div>{this.props.rows}</div>);
+        return (
+            <div>{this.props.rows}</div>
+        );
     }
 });
 
@@ -21,7 +23,6 @@ export default React.createClass({
     return {gurdwarae : [
         { name: 'Sri Akal Takht', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Santokhsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-
         { name: 'Bibeksar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Ramsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Khulsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
@@ -77,23 +78,27 @@ export default React.createClass({
         this.setState({currentStep: ix});
     }
 
-
   },
 
 
   render() {
       var parent = this;
       var rows = this.props.gurdwarae.map(function(row, index){
-          return  <span><a onClick={parent.movePage.bind(event, index+1)}>{row.name + ' - ' + index}  <br /></a></span>
+
+          return  <span className="homescreen-box"
+                        onClick={parent.movePage.bind(event, index+1)}>
+                        {row.name + ' - ' + index}
+                  </span>
       });
 
     if (this.state.currentStep == 0) {
       return (
-          <div className="hello-world">
-            <h1>PAGE 1</h1>
-              <Grid rows={rows} />
+          <div>
+            <div className="mainInfo">
+                <h1>Gurdware Darshan</h1>
+            </div>
 
-            <input type="button" onClick={this.handleClick} />
+            <Grid rows={rows} />
           </div>
       );
     }
@@ -101,7 +106,11 @@ export default React.createClass({
     if (this.state.currentStep != 0) {
       return (
           <div className="hello-world">
-              <a onClick={this.movePage.bind(null, 0)}>back</a>
+              <nav>
+                <a onClick={this.movePage.bind(null, 0)}>back</a>
+                <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>prev</a>
+                <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>next</a>
+              </nav>
               <h1>PAGE -- {this.state.currentStep}</h1>
               <div id="top">
                 <span className="oneThirdWidth">Name</span>
