@@ -23,14 +23,14 @@ export default React.createClass({
     return {gurdwarae : [
         { name: 'Sri Akal Takht', panjabi: 'ਸ੍ਰੀ ਅਕਾਲ ਤਖਾਤ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=akal+takht+created+history&start=10', instagram: '', flickr: '' },
         { name: 'Santokhsar Ji', panjabi: 'ਸੰਤੋਖਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=santokhsar+history',instagram: '', flickr: '' },
-        { name: 'Bibeksar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Ramsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Khulsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Taran Tarn Je', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Tapeana Je',panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Kapoor Je', panjabi: 'Gurdwara Sahib',significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Guru Ke Baoli', panjabi: 'Gurdwara Sahib',significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Sri Goindval Sahib Je', panjabi: 'Gurdwara Sahib',significance: '', city: '', instagram: '', flickr: '' },
+        { name: 'Bibeksar Ji', panjabi: 'ਬਿਬੇਕਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=bibeksar+history', instagram: '', flickr: '' },
+        { name: 'Ramsar Ji', panjabi: 'ਰਾਮਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', instagram: '', flickr: '' },
+        { name: 'Kaulsar Ji', panjabi: 'ਕੌਲਸਰ ਜੀ', significance: '', city: '', google: 'q=Kaulsar+sahib', instagram: '', flickr: '' },
+        { name: 'Taran Tarn Je', panjabi: 'ਤਰਨ ਤਾਰਨ ਜੀ', significance: '', city: 'ਤਰਨ ਤਾਰਨ', instagram: '', flickr: '' },
+        { name: 'Tapiana Je',panjabi: 'ਤਪਿਅਾਣੇ ਜੀ', significance: '', city: 'ਖਡੂਰ', instagram: '', flickr: '' },
+        { name: 'Khadur Je', panjabi: 'ਖਡੂਰ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
+        { name: 'Guru Ki Baoli', panjabi: 'Gurdwara Sahib',significance: 'ਗੁਰੂ ਕੀ ਬਾਉਲੀ', city: '', instagram: '', flickr: '' },
+        { name: 'Sri Goindval Sahib Je', panjabi: 'ਸ਼੍ਰੀ ਗੋਇੰਦਵਾਲ ਸਾਹਿਬ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Tham ji', panjabi: 'Gurdwara Sahib',significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Nanakana Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Kartarpur Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
@@ -79,6 +79,7 @@ export default React.createClass({
         this.setState({name: this.props.gurdwarae[ix-1].panjabi});
         this.setState({google: "https://www.google.ca/search?" + this.props.gurdwarae[ix-1].google});
         this.setState({imgSrc: "./src/imgs/" + (ix-1) + ".jpg"});
+        this.setState({sign: "./src/imgs/" + (ix-1) + "-s.jpg"});
         this.setState({galleryImgSrc: "./src/imgs/" + (ix-1) + "-gl.jpg"});
         this.setState({gallery2ImgSrc: "./src/imgs/" + (ix-1) + "-gl2.jpg"});
 
@@ -130,8 +131,11 @@ export default React.createClass({
 
               </div><br />
               <div id="main">
-                  <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br />
-                  <span><a href={this.state.google} target="blank">Research</a></span>
+                  <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br /><br />
+                  <div id="mainbody">
+                    <span><a href={this.state.sign} target="blank">Sign</a></span><br />
+                    <span><a href={this.state.google} target="blank">Research</a></span>
+                  </div>
               </div>
 
 
