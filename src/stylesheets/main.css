@@ -7,7 +7,17 @@
     background-color: floralwhite;
 }
 
-.oneThirdWidth {
+.oneThirdWidth-left {
+    position: absolute;
+    left:0px;
+    top:15%;
+    width:30%;
+}
+
+.oneThirdWidth-right {
+    position: absolute;
+    right:0px;
+    top:15%;
     width:30%;
 }
 
@@ -16,6 +26,49 @@
     padding:30px;
     border: #05445a 1px solid;
     display: inline-block;
+}
+
+#main {
+    z-index: 30;
+    text-align: center;
+}
+
+#main a {
+    color: black;
+    font-size: 30px;
+    text-underline: none;
+}
+
+.txt-vert{
+    font-size: 3em;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align: center;
+    padding-left: 50px;
+}
+
+.oneThirdWidth-right img {
+    width:250px;
+}
+
+.nishan {
+    height:152px;
+    width:92px;
+}
+
+.bk-img {
+    position: absolute;
+    z-index: -300;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+nav {
+    width: 10%;
+    background-color: floralwhite;
+    font-size: 1.8em;
 }
 
 nav a {

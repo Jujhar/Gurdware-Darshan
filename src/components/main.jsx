@@ -21,8 +21,8 @@ export default React.createClass({
 
     getDefaultProps: function(){
     return {gurdwarae : [
-        { name: 'Sri Akal Takht', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Santokhsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
+        { name: 'Sri Akal Takht', panjabi: 'ਸ੍ਰੀ ਅਕਾਲ ਤਖਾਤ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=akal+takht+created+history&start=10', instagram: '', flickr: '' },
+        { name: 'Santokhsar Ji', panjabi: 'ਸੰਤੋਖਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=santokhsar+history',instagram: '', flickr: '' },
         { name: 'Bibeksar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Ramsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
         { name: 'Khulsar Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
@@ -76,6 +76,13 @@ export default React.createClass({
       //var numa = event.target.value;
     if (ix != 0) {
         this.setState({currentStep: ix});
+        this.setState({name: this.props.gurdwarae[ix-1].panjabi});
+        this.setState({google: "https://www.google.ca/search?" + this.props.gurdwarae[ix-1].google});
+        this.setState({imgSrc: "./src/imgs/" + (ix-1) + ".jpg"});
+        this.setState({galleryImgSrc: "./src/imgs/" + (ix-1) + "-gl.jpg"});
+        this.setState({gallery2ImgSrc: "./src/imgs/" + (ix-1) + "-gl2.jpg"});
+
+
     }
 
   },
@@ -111,11 +118,20 @@ export default React.createClass({
                 <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>prev</a>
                 <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>next</a>
               </nav>
-              <h1>PAGE -- {this.state.currentStep}</h1>
+              <img className="bk-img" src={this.state.imgSrc}/><br />
               <div id="top">
-                <span className="oneThirdWidth">Name</span>
-                <img className="oneThirdWidth" src="./src/imgs/nishan-sahib.gif" />
-                <span className="oneThirdWidth">i</span>
+                <span className="oneThirdWidth-left txt-vert">{this.state.name}</span>
+
+                <span className="oneThirdWidth-right">
+                    i<br />
+                    <img src={this.state.galleryImgSrc} /><br />
+                    <img src={this.state.gallery2ImgSrc} /><br />
+                </span>
+
+              </div><br />
+              <div id="main">
+                  <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br />
+                  <span><a href={this.state.google} target="blank">Research</a></span>
               </div>
 
 
