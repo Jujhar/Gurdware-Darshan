@@ -1,5 +1,5 @@
 # Gurdware Darshan
 
---Instructions--
-npm install
-npm start
+##Instructions
+        npm install
+        npm start

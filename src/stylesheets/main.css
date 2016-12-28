@@ -1,3 +1,6 @@
+.wrapper {
+}
+
 .mainInfo {
     top: 40%;
     position: absolute;
@@ -26,6 +29,10 @@
     padding:30px;
     border: #05445a 1px solid;
     display: inline-block;
+}
+
+#homescreen-box-select {
+    background-color: #00d6b2;
 }
 
 #main {
@@ -75,6 +82,7 @@
 }
 
 nav {
+    #position: fixed;
     width: 15%;
     background-color: floralwhite;
     font-size: 1.8em;
