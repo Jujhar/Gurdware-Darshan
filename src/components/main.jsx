@@ -12,9 +12,18 @@ var Grid = React.createClass({
 
 var Sign = React.createClass({
     render() {
-        return (
-            <span><a href={this.props.srcpng} target="blank">Sign</a></span>
-        );
+
+        if (typeof(this.props.gurdwarae[this.props.idx-1].sign) !== 'number') {
+            return (
+                <span><a href={this.props.srcPng} target="blank">
+                        <img src={this.props.srcPng} width="90" /></a></span>
+            );
+        }
+
+        else {
+            return <span></span>;
+        }
+
     }
 });
 
@@ -29,49 +38,48 @@ export default React.createClass({
 
     getDefaultProps: function(){
     return {gurdwarae : [
-        { name: 'Sri Akal Takht', panjabi: 'ਸ੍ਰੀ ਅਕਾਲ ਤਖਾਤ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=akal+takht+created+history&start=10', instagram: '', flickr: '' },
-        { name: 'Santokhsar Ji', panjabi: 'ਸੰਤੋਖਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=santokhsar+history',instagram: '', flickr: '' },
-        { name: 'Bibeksar Ji', panjabi: 'ਬਿਬੇਕਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=bibeksar+history', instagram: '', flickr: '' },
-        { name: 'Ramsar Ji', panjabi: 'ਰਾਮਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', instagram: '', flickr: '' },
-        { name: 'Kaulsar Ji', panjabi: 'ਕੌਲਸਰ ਜੀ', significance: '', city: '', google: 'q=Kaulsar+sahib', instagram: '', flickr: '' },
-        { name: 'Taran Tarn Je', panjabi: 'ਤਰਨ ਤਾਰਨ ਜੀ', significance: '', city: 'ਤਰਨ ਤਾਰਨ', instagram: '', flickr: '' },
-        { name: 'Tapiana Je',panjabi: 'ਤਪਿਅਾਣੇ ਜੀ', significance: '', city: 'ਖਡੂਰ', instagram: '', flickr: '' },
-        { name: 'Khadur Je', panjabi: 'ਖਡੂਰ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Guru Ki Baoli', panjabi: 'ਗੁਰੂ ਕੀ ਬਾਉਲੀ',significance: 'ਗੁਰੂ ਕੀ ਬਾਉਲੀ', city: '', instagram: '', flickr: '' },
-        { name: 'Sri Goindval Sahib Je', panjabi: 'ਸ਼੍ਰੀ ਗੋਇੰਦਵਾਲ ਸਾਹਿਬ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Tham ji', panjabi: 'ਥੰਮ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Nanakana Ji', panjabi: 'ਨਨਕਾਣੇ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Kartarpur Ji', panjabi: 'ਕੀਰਤਪੁਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Baba Nanak Dera Ji', panjabi: 'ਬਾਬੇ ਨਾਨਕ ਡੇਹਰੇ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Takht Kesgur Sahib Ananadpur Ji', panjabi: 'ਤਖ਼ਤ ਕੇਸਗੜ ਸਾਹਿਬ ਅੰਨਦਪੁਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Kirtpurji', panjabi: 'ਕੀਰਤਪੁਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Paint Ji', panjabi: 'ਪਾਂਉਟੇ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Takht Sri Patna Sahib', panjabi: 'ਤਖ਼ਤ ਸ੍ਰੀ ਪਟਨਾ ਸਾਹਿਬ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: ' HarmanderJi', panjabi: 'ਹਰਿਮੰਦਿਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Delhi Me Ses Ganj', panjabi: 'ਦਖ਼ਲੀ ਮੈ ਸ਼ੀਸ਼ ਗੰਜ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Jekab Ganj', panjabi: 'ਰਕਾਬ ਗੰਜ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Bala Sahib', panjabi: 'ਬਾਲਾ ਸਾਹਿਬ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Bangla Sahib', panjabi: 'ਬ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Stattu Jhandai Sahib Je', panjabi: 'ਸਖ਼ਤੋੰ ਝੰਡਿਆਂ ਸਾਹਿਬਾਂ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Bebaur Sahib Ji', panjabi: 'ਬਿਭੌਰ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Sanjay Sahib Je', panjabi: 'ਪੰਜੇ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Kepal Muchn Je', panjabi: 'ਕਪਾਲ ਮੋਚਨ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Rn Mochn Je', panjabi: 'ਰਣ ਮੋਚਨ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Nanak Mta Je', panjabi: 'Gu', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Shekar Ghat', panjabi: 'Gurd', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Hera Ghat', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Mata Sahib Devi je', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Sangat Sahib Ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Mal Takri Sahib Je', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Bsmt ngr damdma sahib ji', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Banda Ghat Je', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Negena Ghat Sahib Je', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Ganga Gaudwari Je', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Takht Sahkand Sri Hajoor Sahib', panjabi: 'ਤਖ਼ਤ ਸ੍ਖ਼ਚਖੰਡ ਸ੍ਰੀ ਹਜ਼ੂਰ ਸ੍ਰੀ ਅਬਿਚਲ ਨਗਰੁ ਸਾਹਿਬ ਸ੍ਰੀ ਅਕਾਲ ਪੁਰਖ ਜੀ ਦਾ', significance: '', city: '', instagram: '', flickr: '' },
-        { name: 'Siri Abchal Nagar Sahib Je', panjabi: 'Gurdwara Sahib', significance: '', city: '', instagram: '', flickr: '' }
-         ]};
+            { name: 'Sri Akal Takht', panjabi: 'ਸ੍ਰੀ ਅਕਾਲ ਤਖਾਤ', significance: '', sign:0, city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=akal+takht+created+history&start=10', instagram: '', flickr: '' },
+            { name: 'Santokhsar Ji', panjabi: 'ਸੰਤੋਖਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=santokhsar+history',instagram: '', flickr: '' },
+            { name: 'Bibeksar Ji', panjabi: 'ਬਿਬੇਕਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=bibeksar+history', instagram: '', flickr: '' },
+            { name: 'Ramsar Ji', panjabi: 'ਰਾਮਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ', instagram: '', flickr: '' },
+            { name: 'Kaulsar Ji', panjabi: 'ਕੌਲਸਰ ਜੀ', significance: '', city: '', google: 'q=Kaulsar+sahib', instagram: '', flickr: '' },
+            { name: 'Taran Tarn Je', panjabi: 'ਤਰਨ ਤਾਰਨ ਜੀ', significance: '', city: 'ਤਰਨ ਤਾਰਨ', instagram: '', flickr: '' },
+            { name: 'Tapiana Je',panjabi: 'ਤਪਿਅਾਣੇ ਜੀ', significance: '', city: 'ਖਡੂਰ', instagram: '', flickr: '' },
+            { name: 'Khadur Je', panjabi: 'ਖਡੂਰ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Guru Ki Baoli', panjabi: 'ਗੁਰੂ ਕੀ ਬਾਉਲੀ',significance: 'ਗੁਰੂ ਕੀ ਬਾਉਲੀ', city: '', instagram: '', flickr: '' },
+            { name: 'Sri Goindval Sahib Je', panjabi: 'ਸ਼੍ਰੀ ਗੋਇੰਦਵਾਲ ਸਾਹਿਬ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Tham ji', panjabi: 'ਥੰਮ ਜੀ',significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Nanakana Ji', panjabi: 'ਨਨਕਾਣੇ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Kartarpur Ji', panjabi: 'ਕੀਰਤਪੁਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Baba Nanak Dera Ji', panjabi: 'ਬਾਬੇ ਨਾਨਕ ਡੇਹਰੇ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Takht Kesgarh Sahib Anandpur Ji', panjabi: 'ਤਖ਼ਤ ਕੇਸਗੜ ਸਾਹਿਬ ਅੰਨਦਪੁਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Kiratpur Ji', panjabi: 'ਕੀਰਤਪੁਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Paonta Ji', panjabi: 'ਪਾਂਉਟੇ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Takht Sri Patna Sahib', panjabi: 'ਤਖ਼ਤ ਸ੍ਰੀ ਪਟਨਾ ਸਾਹਿਬ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Harimander Ji', panjabi: 'ਹਰਿਮੰਦਿਰ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Delhi Me Sis Ganj', panjabi: 'ਦਖ਼ਲੀ ਮੈ ਸ਼ੀਸ਼ ਗੰਜ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Raqab Ganj', panjabi: 'ਰਕਾਬ ਗੰਜ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Bala Sahib', panjabi: 'ਬਾਲਾ ਸਾਹਿਬ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Bangla Sahib', panjabi: 'ਬੰਗਲਾ ਸਾਹਿਬ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Stattu Jhandai Sahib Je', panjabi: 'ਸਖ਼ਤੋੰ ਝੰਡਿਆਂ ਸਾਹਿਬਾਂ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Bebaur Sahib Ji', panjabi: 'ਬਿਭੌਰ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Panja Sahib Je', panjabi: 'ਪੰਜੇ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Kapal Mochan Je', panjabi: 'ਕਪਾਲ ਮੋਚਨ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Ran Mochan Je', panjabi: 'ਰਣ ਮੋਚਨ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Nanak Jhira Je', panjabi: 'ਨਾਨਕ ਝੀਰੇ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Shikar Ghat', panjabi: 'ਸ਼ਿਕਾਰ ਘਾਟ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Hera Ghat', panjabi: 'ਹੀਰਾ ਘਾਟ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Mata Sahib Devan je', panjabi: 'ਮਾਤਾ ਸਾਹਿਬ ਦਿਵਾਂ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Sangat Sahib Ji', panjabi: 'ਸੰਗਤ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Mal Tekari Sahib Je', panjabi: 'ਮਾਲ ਟੇਕਰੀ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Basmath Nagar Damdama Sahib Je', panjabi: 'ਬਸਮਤ ਨਗਰ ਦਮਦਮਾ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Banda Ghat Je', panjabi: 'ਬੰਦਾ ਘਾਟ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Nagina Ghat Sahib Je', panjabi: 'ਨਗੀਨਾ ਘਾਟ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Ganga Godavari Je', panjabi: 'ਗੰਗਾ ਗੋਦਾਵਰੀ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
+            { name: 'Takht Sahkand Sri Hajoor Sahib', panjabi: 'ਤਖ਼ਤ ਸ੍ਖ਼ਚਖੰਡ ਸ੍ਰੀ ਹਜ਼ੂਰ ਸ੍ਰੀ ਅਬਿਚਲ ਨਗਰੁ ਸਾਹਿਬ ਸ੍ਰੀ ਅਕਾਲ ਪੁਰਖ ਜੀ ਦਾ', significance: '', city: '', instagram: '', flickr: '' }
+        ]};
 
-  },
+      },
 
 
   movePage(ix) {
@@ -150,7 +158,7 @@ export default React.createClass({
                   <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br /><br />
                   <div id="mainbody">
 
-                    <Sign src-png="this.state.sign" /><br />
+                    <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
 
                     <span><a href={this.state.google} target="blank">Research</a></span>
                   </div>

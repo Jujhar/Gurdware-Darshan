@@ -32,7 +32,7 @@
 }
 
 #homescreen-box-select {
-    background-color: #00d6b2;
+    background-color: deepskyblue;
 }
 
 #main {
@@ -57,7 +57,7 @@
 
 .txt-vert{
     font-size: 3em;
-    writing-mode: vertical-lr;
+    #writing-mode: vertical-lr;
     text-orientation: upright;
     text-align: center;
     padding-left: 50px;
