@@ -27,7 +27,7 @@
 .homescreen-box {
     margin:15px;
     padding:30px;
-    border: #05445a 1px solid;
+    border: #33acfe 1px solid;
     display: inline-block;
 }
 
@@ -82,8 +82,10 @@
 }
 
 nav {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
     #position: fixed;
-    width: 15%;
     background-color: floralwhite;
     font-size: 1.8em;
 }

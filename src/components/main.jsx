@@ -1,8 +1,18 @@
-// Built by Singh - 2016
+// ਸਿੰਘ ਦਾ ਕਾਮ - 2016
 
 import React from 'react/addons';
 
+let divStyle;
+
 var Grid = React.createClass({
+    componentWillMount: function() {
+        document.body.style.backgroundColor = "white";
+        divStyle = {
+            marginTop: 0
+        };
+
+    },
+
     render() {
         return (
             <div>{this.props.rows}</div>
@@ -11,12 +21,60 @@ var Grid = React.createClass({
 });
 
 var Sign = React.createClass({
-    render() {
+
+    componentWillMount: function() {
+        document.body.style.backgroundColor = "green";
+        divStyle = {
+            marginTop: 300,
+            width: 200
+        };
+
+    },
+
+    componentDidMount: function() {
+        let img = document.getElementById('bk-img').height;
+        let width = document.getElementById('bk-img').width;
+        img = parseInt(img)-330;
+        width = width * 0.82;
+        margin = width * 0.65;
+
+
+        divStyle = {
+            marginTop: img,
+            width: width,
+            marginLeft: -margin
+        };
+
+    },
+
+    componentWillUpdate: function() {
+
+        let img = document.getElementById('bk-img').height;
+        let width = document.getElementById('bk-img').width;
+        img = parseInt(img)-330;
+        width = width * 0.82;
+
+        divStyle = {
+            marginTop: img,
+            width: width,
+            marginLeft: -200
+        };
+
+    },
+
+    componentWillUnmount: function() {
+        document.body.style.backgroundColour = null;
+
+    },
+
+
+
+render() {
 
         if (typeof(this.props.gurdwarae[this.props.idx-1].sign) !== 'number') {
             return (
-                <span><a href={this.props.srcPng} target="blank">
-                        <img src={this.props.srcPng} width="90" /></a></span>
+                <div style={divStyle}><a href={this.props.srcPng} target="blank">
+                        <img src={this.props.srcPng} width="90%" /></a></div>
             );
         }
 
@@ -143,14 +201,20 @@ export default React.createClass({
                 <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>prev</a>
                 <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>next</a>
               </nav>
-              <img className="bk-img" src={this.state.imgSrc}/><br />
+              <img id="bk-img" className="bk-img" src={this.state.imgSrc}/><br />
+
+
               <div id="top">
                 <span className="oneThirdWidth-left txt-vert">{this.state.name}</span>
 
                 <span className="oneThirdWidth-right">
-                    i<br />
-                    <img src={this.state.galleryImgSrc} /><br />
-                    <img src={this.state.gallery2ImgSrc} /><br />
+                    <br />
+                    <a href={this.state.galleryImgSrc} target="blank">
+                        <img src={this.state.galleryImgSrc} />
+                    </a><br />
+                    <a href={this.state.gallery2ImgSrc} target="blank">
+                        <img src={this.state.gallery2ImgSrc} />
+                    </a><br />
                 </span>
 
               </div><br />
@@ -158,9 +222,10 @@ export default React.createClass({
                   <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br /><br />
                   <div id="mainbody">
 
-                    <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
 
                     <span><a href={this.state.google} target="blank">Research</a></span>
+                      <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
+
                   </div>
               </div>
 
