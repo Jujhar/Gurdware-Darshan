@@ -134,7 +134,7 @@ export default React.createClass({
             { name: 'Banda Ghat Je', panjabi: 'ਬੰਦਾ ਘਾਟ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
             { name: 'Nagina Ghat Sahib Je', panjabi: 'ਨਗੀਨਾ ਘਾਟ ਸਾਹਿਬ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
             { name: 'Ganga Godavari Je', panjabi: 'ਗੰਗਾ ਗੋਦਾਵਰੀ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
-            { name: 'Takht Sahkand Sri Hajoor Sahib', panjabi: 'ਤਖ਼ਤ ਸ੍ਖ਼ਚਖੰਡ ਸ੍ਰੀ ਹਜ਼ੂਰ ਸ੍ਰੀ ਅਬਿਚਲ ਨਗਰੁ ਸਾਹਿਬ ਸ੍ਰੀ ਅਕਾਲ ਪੁਰਖ ਜੀ ਦਾ', significance: '', city: '', instagram: '', flickr: '' }
+            { name: 'Takht Sahkand Sri Hajoor Sahib', panjabi: 'ਤਖ਼ਤ ਸ੍ਖ਼ਚਖੰਡ ਸ੍ਰੀ ਹਜ਼ੂਰ ਸ੍ਰੀ ਅਬਿਚਲ ਨਗਰੁ ਸਾਹਿਬ ਸ੍ਰੀ ਅਕਾਲ ਪੁਰਖ ਜੀ ਦਾ', sign:0, significance: '', city: '', instagram: '', flickr: '' }
         ]};
 
       },
