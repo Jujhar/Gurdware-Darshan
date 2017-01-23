@@ -21,44 +21,48 @@ var Grid = React.createClass({
 });
 
 var Sign = React.createClass({
-
     componentWillMount: function() {
-        document.body.style.backgroundColor = "green";
-        divStyle = {
-            marginTop: 300,
-            width: '600'
-        };
+        if ( document.body.clientWidth > 670 ) {
+            document.body.style.backgroundColor = "green";
+            divStyle = {
+                marginTop: 300,
+                width: '600'
+            };
+        }
 
     },
 
     componentDidMount: function() {
-        let img = document.getElementById('bk-img').height;
-        let width = document.getElementById('bk-img').width;
-        img = parseInt(img)-330;
-        width = width * 0.57;
-        margin = width * 0.65;
+        if ( document.body.clientWidth > 670 ) {
+            let img = document.getElementById('bk-img').height;
+            let width = document.getElementById('bk-img').width;
+            img = parseInt(img) - 330;
+            width = width * 0.57;
+            margin = width * 0.65;
 
 
-        divStyle = {
-            marginTop: img,
-            width: width,
-            marginLeft: -margin
-        };
+            divStyle = {
+                marginTop: img,
+                width: width,
+                marginLeft: -margin
+            };
+        }
 
     },
 
     componentWillUpdate: function() {
+        if ( document.body.clientWidth  > 670 ) {
+            let img = document.getElementById('bk-img').height;
+            let width = document.getElementById('bk-img').width;
+            img = parseInt(img) - 330;
+            width = width * 0.57;
 
-        let img = document.getElementById('bk-img').height;
-        let width = document.getElementById('bk-img').width;
-        img = parseInt(img)-330;
-        width = width * 0.57;
-
-        divStyle = {
-            marginTop: img,
-            width: width,
-            marginLeft: -200
-        };
+            divStyle = {
+                marginTop: img,
+                width: width,
+                marginLeft: -200
+            };
+        }
 
     },
 
@@ -74,7 +78,7 @@ render() {
         if (typeof(this.props.gurdwarae[this.props.idx-1].sign) !== 'number') {
             return (
                 <div style={divStyle}><a href={this.props.srcPng} target="blank">
-                        <img src={this.props.srcPng} width="90%" /></a></div>
+                        <img id="imgsign" src={this.props.srcPng} /></a></div>
             );
         }
 
@@ -85,9 +89,26 @@ render() {
     }
 });
 
+function disappear(){
+    document.getElementById("mainInfo").style.display = 'visible';
+    document.getElementById("mainInfo").style.opacity = 1;
+    setTimeout(function() { document.getElementById("mainInfo").style.opacity = 0.5; }.bind(this), 1000);
+    setTimeout(function() { document.getElementById("mainInfo").style.opacity = 0.0; }.bind(this), 3000);
+    setTimeout(function() { document.getElementById("mainInfo").style.display = 'none'; }.bind(this), 3700);
+}
+
 export default React.createClass({
 
 
+
+    componentDidMount : function(){
+        disappear();
+    },
+
+    componentDidUpdate : function(){
+        disappear();
+
+    },
 
   getInitialState() {
     return ({ currentStep: 0, prevState: 0
@@ -95,7 +116,8 @@ export default React.createClass({
   },
 
 
-    getDefaultProps: function(){
+
+getDefaultProps: function(){
 
     return {gurdwarae : [
             { name: 'Sri Akal Takht', panjabi: 'ਸ੍ਰੀ ਅਕਾਲ ਤਖਾਤ', significance: '', sign:0, city: 'ਅਮ੍ਰਤਸਾਰ', google: 'q=akal+takht+created+history&start=10', instagram: '', flickr: '' },
@@ -188,7 +210,7 @@ export default React.createClass({
     if (this.state.currentStep == 0) {
       return (
           <div>
-            <div className="mainInfo">
+            <div id="mainInfo">
                 <h1>Gurdware Darshan</h1>
             </div>
 
@@ -206,13 +228,13 @@ export default React.createClass({
             color: 'black'
         };
         // 1 is grey
-        if (this.state.colorSchme == 1) {
+        if (this.state.colorSchme == 1 && document.body.clientWidth > 678) {
             divStyle = {
                 color: '#f3e797'
             };
         }
         // 2 is blue
-        if (this.state.colorSchme == 2) {
+        if (this.state.colorSchme == 2 && document.body.clientWidth > 678) {
             divStyle = {
                 color: '#25ceff'
             };
@@ -220,19 +242,27 @@ export default React.createClass({
 
       return (
           <div className="wrapper">
-              <nav>
+              <nav id="pc">
                 <a onClick={this.movePage.bind(null, 0)}>home</a>
                 <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>prev</a>
                 <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>next</a>
               </nav>
+              <nav id="mobile">
+                  <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>prev</a>
+                  <a id='mobilecenter' onClick={this.movePage.bind(null, 0)}>home</a>
+                  <a id='mobileright' onClick={this.movePage.bind(null, this.state.currentStep+1)}>next</a>
+              </nav>
               <img id="bk-img" className="bk-img" src={this.state.imgSrc}/><br />
+              <div id="mobilesign">
+                  <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
+              </div>
 
 
               <div id="top">
                 <span className="oneThirdWidth-left txt-vert">
                     <span style={divStyle}>{this.state.name}</span>
+                    <div id="mobilesub"><a href={this.state.google} target="blank" style={divStyle}>Research</a></div>
                 </span>
-
 
                 <span className="oneThirdWidth-right">
                     <br />
@@ -244,24 +274,25 @@ export default React.createClass({
                     </a><br />
                 </span>
 
-              </div><br />
+              </div>
+              <br />
+
               <div id="main">
                   <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br /><br />
                   <div id="mainbody">
-
-
                     <span><a href={this.state.google} target="blank" style={divStyle}>Research</a></span>
-                      <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
-
+                    <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
                   </div>
               </div>
 
 
           </div>
       );
+
+
     }
-
-
 
   }
 });
+
+
