@@ -1,5 +1,10 @@
 # Gurdware Darshan
 
-##Instructions
+
+#####View live at:
+
+http://ਭਪ.io/gurdware-darshan/
+
+## Instructions
         npm install
         npm start
