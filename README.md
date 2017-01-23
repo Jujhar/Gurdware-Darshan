@@ -3,7 +3,7 @@
 
 #####View live at:
 
-http://ਭਪ.io/gurdware-darshan/
+[http://ਭਪ.io/gurdware-darshan/](http://ਭਪ.io/gurdware-darshan/)
 
 ## Instructions
         npm install
