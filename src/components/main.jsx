@@ -237,7 +237,7 @@ getDefaultProps: function(){
 
           return  <span className="homescreen-box"
                         onClick={parent.movePage.bind(null, index+1)}>
-                        {row.name + ' - ' + index}
+                        {row.name + ' - ' + (index+1)}
                   </span>
       });
 
@@ -249,6 +249,12 @@ getDefaultProps: function(){
             </div>
 
             <Grid rows={rows} prev={this.state.prevState}/>
+
+            <div className="ribbon right grey">
+                <a href="https://github.com/Jujhar/Gurdware-Darshan">Fork me on GitHub</a>
+            </div>
+
+
           </div>
       );
     }

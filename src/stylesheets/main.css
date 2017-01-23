@@ -128,8 +128,13 @@
         position: default;
         width:100%;
     }
+
     #mobilesub {
         font-size: medium;
+    }
+
+    .ribbon {
+        display: none;
     }
 
 }
@@ -245,6 +250,10 @@
 
     #mobilesub {
         display: none;
+    }
+
+    .ribbon {
+        display: inherit;
     }
 
 }
