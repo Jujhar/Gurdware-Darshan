@@ -1,5 +1,7 @@
 @media screen and (min-width: 100px) {
     #mainInfo {
+    font-family: "Arial Black";
+    border: solid 33px white;
     position: absolute;
     top:10px;
     width:90%;
@@ -13,6 +15,9 @@
     }
 
     .homescreen-box {
+        font-family: "Helvetica";
+        font-weight: lighter;
+        border-radius: 2px;
         margin:15px;
         padding:30px;
         border: #33acfe 3px solid;
@@ -266,7 +271,10 @@
 }
 
 #homescreen-box-select {
+    opacity: 0.3;
     background-color: deepskyblue;
+    border:  solid 2px #f3e797;
+
 }
 
 #main {

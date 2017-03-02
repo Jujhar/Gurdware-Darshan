@@ -23,7 +23,7 @@ var Grid = React.createClass({
 var Sign = React.createClass({
     componentWillMount: function() {
         if ( document.body.clientWidth > 670 ) {
-            document.body.style.backgroundColor = "green";
+            document.body.style.backgroundColor = "#ccecff";
             divStyle = {
                 marginTop: 300,
                 width: '600'
@@ -78,7 +78,8 @@ render() {
         if (typeof(this.props.gurdwarae[this.props.idx-1].sign) !== 'number') {
             return (
                 <div style={divStyle}><a href={this.props.srcPng} target="blank">
-                        <img id="imgsign" src={this.props.srcPng} /></a></div>
+                        <img id="imgsign" src={this.props.srcPng} 
+                            style={{borderRadius : "2px"}}/></a></div>
             );
         }
 
@@ -129,47 +130,47 @@ getDefaultProps: function(){
             { name: 'Ramsar Ji', panjabi: 'ਰਾਮਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ',
                 google: 'q=Gurdwara+ramsar+sarovar+history', instagram: '', flickr: '', colorscm:1 },
             { name: 'Kaulsar Ji', panjabi: 'ਕੌਲਸਰ ਜੀ', significance: '', city: '',
-                google: 'q=Kaulsar+sahib', instagram: '', flickr: '' },
+                google: 'q=Kaulsar+sahib', instagram: '', flickr: '' , lnkscm:1},
             { name: 'Taran Tarn Ji', panjabi: 'ਤਰਨ ਤਾਰਨ ਜੀ', significance: '', city: 'ਤਰਨ ਤਾਰਨ',
-                google: 'Gurdwara+taran+tarn+history', instagram: '', flickr: '' },
+                google: 'q=Gurdwara+taran+tarn+history', instagram: '', flickr: '' },
             { name: 'Tapiana Ji',panjabi: 'ਤਪਿਅਾਣੇ ਜੀ', significance: '', city: 'ਖਡੂਰ',
                 google: 'q=Khadoor+sahib+gurudwara+history', instagram: '', flickr: '' },
             { name: 'Khadur Ji', panjabi: 'ਖਡੂਰ ਜੀ',significance: '', sign:0, city: '',
-                instagram: '', flickr: '' },
+                instagram: '', flickr: '', lnkscm:1 },
             { name: 'Guru Ki Baoli', panjabi: 'ਗੁਰੂ ਕੀ ਬਾਉਲੀ',significance: 'ਗੁਰੂ ਕੀ ਬਾਉਲੀ', google: 'q=+guru+ki+baoli+goindwal+sahib+history', city: '',
-                instagram: '', flickr: '' },
+                instagram: '', flickr: '', lnkscm:1 },
             { name: 'Sri Goindval Sahib Ji', panjabi: 'ਸ਼੍ਰੀ ਗੋਇੰਦਵਾਲ ਸਾਹਿਬ ਜੀ',significance: '', city: '',
                 google: 'q=goindwal+sahib+history', instagram: '', flickr: '' },
             { name: 'Tham Ji', panjabi: 'ਥੰਮ ਜੀ',significance: '', city: '',
-                google: 'q=+tham+sahib+history', instagram: '', flickr: '' },
+                google: 'q=+tham+sahib+history', instagram: '', flickr: '', lnkscm:1 },
             { name: 'Nanakana Ji', panjabi: 'ਨਨਕਾਣੇ ਜੀ', significance: '', sign:0, city: '',
-                google: 'q=nankana+sahib+history&start=10', instagram: '', flickr: '' },
+                google: 'q=nankana+sahib+history&start=10', instagram: '', flickr: '', lnkscm:1 },
             { name: 'Kartarpur Ji', panjabi: 'ਕਰਤਾਰਪੁਰ ਜੀ', significance: '', sign:0, city: '',
                 google: 'q=gurdwara+kartarpur+sahib+history', instagram: '', flickr: '' },
             { name: 'Baba Nanak Dera Ji', panjabi: 'ਬਾਬੇ ਨਾਨਕ ਡੇਹਰੇ ਜੀ', significance: '', city: '',
                 google: 'q=gurdwara+baba+nanak+dera+history', instagram: '', flickr: '' },
             { name: 'Takht Kesgarh Sahib Anandpur Ji', panjabi: 'ਤਖ਼ਤ ਕੇਸਗੜ ਸਾਹਿਬ ਅੰਨਦਪੁਰ ਜੀ', sign:0, significance: '', city: '',
-                google: 'q=gurdwara+kesgarh+sahib+history', instagram: '', flickr: '' },
+                google: 'q=gurdwara+kesgarh+sahib+history', instagram: '', flickr: '', lnkscm:1 },
             { name: 'Kiratpur Ji', panjabi: 'ਕੀਰਤਪੁਰ ਜੀ', significance: '', city: '',
-                google: 'q=gurdwara+patalpuri+sahib+history', instagram: '', flickr: '' },
+                google: 'q=gurdwara+patalpuri+sahib+history', instagram: '', flickr: '', lnkscm:1 },
             { name: 'Paonta Ji', panjabi: 'ਪਾਂਉਟੇ ਜੀ', significance: '', city: '',
-                google: 'q=gurdwara+paonta+sahib+history', instagram: '', flickr: '' },
+                google: 'q=gurdwara+paonta+sahib+history', instagram: '', flickr: '', lnkscm:1 },
             { name: 'Takht Sri Patna Sahib Harimander Ji', panjabi: 'ਤਖ਼ਤ ਸ੍ਰੀ ਪਟਨਾ ਸਾਹਿਬ ਹਰਿਮੰਦਿਰ ਜੀ', significance: '', city: '',
                 google: 'q=gurdwara+patna+haremandir+sahib+history', instagram: '', flickr: '' },
             { name: 'Delhi Me Sis Ganj', panjabi: 'ਦਖ਼ਲੀ ਮੈ ਸ਼ੀਸ਼ ਗੰਜ', sign:0, significance: '', city: '',
-                google: 'q=delhi+sis+ganj+sahib+history', instagram: '', flickr: '' },
+                google: 'q=delhi+sis+ganj+sahib+history', instagram: '', flickr: '', lnkscm:1 },
             { name: 'Raqab Ganj', panjabi: 'ਰਕਾਬ ਗੰਜ', significance: '', city: '',
-                google: 'q=delhi+sis+ganj+sahib+history', instagram: '', flickr: '' },
+                google: 'q=delhi+sis+ganj+sahib+history', instagram: '', flickr: '', colorscm:1 },
             { name: 'Bala Sahib', panjabi: 'ਬਾਲਾ ਸਾਹਿਬ', significance: '', city: '',
                 google: 'q=rekab+ganj+sahib+history', instagram: '', flickr: '', colorscm:1 },
             { name: 'Bangla Sahib', panjabi: 'ਬੰਗਲਾ ਸਾਹਿਬ', significance: '', city: '',
                 google: 'q=gurdwara+bangla+sahib+history', instagram: '', flickr: '' },
             { name: 'Bhibaour Sahib Ji', panjabi: 'ਬਿਭੌਰ ਸਾਹਿਬ ਜੀ', significance: '', city: '',
-                google: 'q=GURDWARA+BHIBOUR+SAHIB', instagram: '', flickr: '' },
+                google: 'q=GURDWARA+BHIBOUR+SAHIB', instagram: '', flickr: '' , lnkscm:1},
             { name: 'Panja Sahib Ji', panjabi: 'ਪੰਜੇ ਸਾਹਿਬ ਜੀ', sign:0, significance: '', city: '',
-                google: 'q=panja+sahib+history', paninstagram: '', flickr: '' },
+                google: 'q=panja+sahib+history', paninstagram: '', flickr: '', lnkscm:1 },
             { name: 'Kapal Mochan Ji', panjabi: 'ਕਪਾਲ ਮੋਚਨ ਜੀ', significance: '', city: '',
-                google: 'q=Kapal+Mochan+gurdwara+history', instagram: '', flickr: '' },
+                google: 'q=Kapal+Mochan+gurdwara+history', instagram: '', flickr: '', lnkscm:1 },
            // { name: ' Mochan Je', panjabi: 'ਰਣ ਮੋਚਨ ਜੀ', significance: '', city: '', instagram: '', flickr: '' },
             { name: 'Nanak Mata Ji', panjabi: 'ਨਾਨਕ ਮਤੇ ਜੀ', sign:0, significance: '',
                 city: '', google: 'q=nanak+mata+sahib+gurdwara+history', instagram: '', flickr: '' },
@@ -178,7 +179,7 @@ getDefaultProps: function(){
             { name: 'Nanak Jhira Ji', panjabi: 'ਨਾਨਕ ਝੀਰੇ ਜੀ', significance: '', city: '',
                 google: 'q=Nanak+Jhira+gurdwara+history', colorscm:2, instagram: '', flickr: '' },
             { name: 'Shikar Ghat', panjabi: 'ਸ਼ਿਕਾਰ ਘਾਟ ਜੀ', significance: '', city: '',
-                google: 'q=Shikar+Ghat+gurdwara+history', instagram: '', flickr: '' },
+                google: 'q=Shikar+Ghat+gurdwara+history', instagram: '', flickr: '', lnkscm:1 },
             { name: 'Hera Ghat', panjabi: 'ਹੀਰਾ ਘਾਟ ਜੀ', significance: '', city: '',
                 instagram: '', google: 'q=Hira+ghat+gurdwara+history', flickr: '' },
             { name: 'Mata Sahib Devan Ji', panjabi: 'ਮਾਤਾ ਸਾਹਿਬ ਦਿਵਾਂ ਜੀ', significance: '', city: '',
@@ -214,6 +215,7 @@ getDefaultProps: function(){
         this.setState({imgSrc: "./src/imgs/" + (ix-1) + ".jpg"});
         this.setState({sign: "./src/imgs/" + (ix-1) + "-s.jpg"});
         this.setState({colorSchme: this.props.gurdwarae[ix-1].colorscm});
+        this.setState({lnkSchme: this.props.gurdwarae[ix-1].lnkscm});
         this.setState({galleryImgSrc: "./src/imgs/" + (ix-1) + "-gl.jpg"});
         this.setState({gallery2ImgSrc: "./src/imgs/" + (ix-1) + "-gl2.jpg"});
 
@@ -263,11 +265,27 @@ getDefaultProps: function(){
     if (this.state.currentStep != 0) {
 
 
-        // Set colour scheme
-        let divStyle = {
-            color: 'black'
+        // Set colour customizations
+        let linkStyle = {
+            textDecoration: 'none',
+            fontFamily: 'Helvetica',
+            color: '#b9ccea',
+            textShadowOffset: {width: 2, height: 2},
+            textShadowRadius: 1, textShadowColor: '#00cccc'
         };
-        // 1 is grey
+        if (this.state.lnkSchme == 1 && document.body.clientWidth > 678) {
+            linkStyle = {
+            textDecoration: 'none',
+            fontFamily: 'Helvetica',
+            color: '#f3e797',
+            textShadowOffset: {width: 2, height: 2},
+            textShadowRadius: 1, textShadowColor: '#00cccc'
+        };
+        }
+
+        let divStyle;
+
+        // 1 is yellow/grey
         if (this.state.colorSchme == 1 && document.body.clientWidth > 678) {
             divStyle = {
                 color: '#f3e797'
@@ -284,13 +302,13 @@ getDefaultProps: function(){
           <div className="wrapper">
               <nav id="pc">
                 <a onClick={this.movePage.bind(null, 0)}>home</a>
-                <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>prev</a>
-                <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>next</a>
+                <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>↖</a>
+                <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>↗</a>
               </nav>
-              <nav id="mobile">
-                  <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>prev</a>
+              <nav id="mobile" style={{zIndex : "22", opacity: "0.9"}}>
+                  <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>↖</a>
                   <a id='mobilecenter' onClick={this.movePage.bind(null, 0)}>home</a>
-                  <a id='mobileright' onClick={this.movePage.bind(null, this.state.currentStep+1)}>next</a>
+                  <a id='mobileright' onClick={this.movePage.bind(null, this.state.currentStep+1)}>↗</a>
               </nav>
               <img id="bk-img" className="bk-img" src={this.state.imgSrc}/><br />
               <div id="mobilesign">
@@ -300,17 +318,17 @@ getDefaultProps: function(){
 
               <div id="top">
                 <span className="oneThirdWidth-left txt-vert">
-                    <span style={divStyle}>{this.state.name}</span>
-                    <div id="mobilesub"><a href={this.state.google} target="blank" style={divStyle}>Research</a></div>
+                    <span style={{divStyle, backgroundColor: "#ff712b", opacity: "0.8", fontWeight:"bolder"}}>{this.state.name}</span>
+                    <div id="mobilesub"><a href={this.state.google} target="blank" style={{...linkStyle, ...divStyle, backgroundColor : "#ff712b"}}>ℹnfo</a></div>
                 </span>
 
                 <span className="oneThirdWidth-right">
                     <br />
                     <a href={this.state.galleryImgSrc} target="blank">
-                        <img src={this.state.galleryImgSrc} />
+                        <img src={this.state.galleryImgSrc} style={{opacity : '0.7'}}/>
                     </a><br />
                     <a href={this.state.gallery2ImgSrc} target="blank">
-                        <img src={this.state.gallery2ImgSrc} />
+                        <img src={this.state.gallery2ImgSrc} style={{opacity : '0.8'}}/>
                     </a><br />
                 </span>
 
@@ -320,7 +338,8 @@ getDefaultProps: function(){
               <div id="main">
                   <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br /><br />
                   <div id="mainbody">
-                    <span><a href={this.state.google} target="blank" style={divStyle}>Research</a></span>
+                    <span><a href={this.state.google} target="blank" style={{...linkStyle, ...divStyle, backgroundColor : "#ff712b"}}>
+                        <span style={{display : 'inline-block', fontSize : '1.2em'}}>ℹnfo</span></a></span>
                     <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
                   </div>
               </div>
