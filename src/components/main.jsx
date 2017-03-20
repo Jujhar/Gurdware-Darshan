@@ -253,12 +253,9 @@ getDefaultProps(){
             <Grid rows={rows} prev={this.state.prevState}/>
 
             <div className="ribbon right grey">
+                <a onClick={this.movePage.bind(null, 99)}>About</a>
                 <a href="https://github.com/Jujhar/Gurdware-Darshan">Fork me on GitHub</a>
-                <a onClick={parent.movePage.bind(null, index+1)} 
-                    style={{color :"magenta"}}>About</a>
             </div>
-
-
           </div>
       );
     }
@@ -270,8 +267,26 @@ getDefaultProps(){
                 <h1>About</h1>
             </div>
 
-            <div>
-                About here
+            <h3>Gurdware Darshan</h3>
+
+            
+
+            <div style={{width:"300px"}}>
+
+                <p>
+                Was created by Jujhar and using React in later 2016 and early 2017.
+                </p><br />
+
+                <p>Gurdwara means the doorway to the Guru. It is also functions as equivalent of a Dharmsala a meeting place of spiritually inclined people and saints. The congregations of those at a Gurdwaras is equivalent to the congregation of a saint. The sikh perspective is nonexistent the Sikh means the Gnostic and in essence the entire religion was formed to stop the division of people and find a common place to live in the truth. While other people who claim authority of the truth and convert people to be their followers Guru Nanak laid his following to the one human race the one creator God. 
+            
+                </p>
+            </div>
+
+            <h6>Rebabre software</h6>
+
+            <div className="ribbon right grey">
+                <a onClick={this.movePage.bind(null, 0)}>Back</a>
+                <a href="https://github.com/Jujhar/Gurdware-Darshan">Fork me on GitHub</a>
             </div>
 
 
@@ -321,12 +336,12 @@ getDefaultProps(){
               <nav id="pc">
                 <a onClick={this.movePage.bind(null, 0)}>home</a>
                 <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>↖</a>
-                <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>↗</a>
+                <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>↪</a>
               </nav>
               <nav id="mobile" style={{zIndex : "22", opacity: "0.9"}}>
                   <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>↖</a>
                   <a id='mobilecenter' onClick={this.movePage.bind(null, 0)}>home</a>
-                  <a id='mobileright' onClick={this.movePage.bind(null, this.state.currentStep+1)}>↗</a>
+                  <a id='mobileright' onClick={this.movePage.bind(null, this.state.currentStep+1)}>↪</a>
               </nav>
               <img id="bk-img" className="bk-img" src={this.state.imgSrc}/><br />
               <div id="mobilesign">
