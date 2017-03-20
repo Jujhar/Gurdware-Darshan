@@ -32,7 +32,7 @@ var Sign = React.createClass({
 
     },
 
-    componentDidMount: function() {
+    componentDidMount() {
         if ( document.body.clientWidth > 670 ) {
             let img = document.getElementById('bk-img').height;
             let width = document.getElementById('bk-img').width;
@@ -50,7 +50,7 @@ var Sign = React.createClass({
 
     },
 
-    componentWillUpdate: function() {
+    componentWillUpdate() {
         if ( document.body.clientWidth  > 670 ) {
             let img = document.getElementById('bk-img').height;
             let width = document.getElementById('bk-img').width;
@@ -66,7 +66,7 @@ var Sign = React.createClass({
 
     },
 
-    componentWillUnmount: function() {
+    componentWillUnmount() {
         document.body.style.backgroundColour = null;
 
     },
@@ -102,11 +102,11 @@ export default React.createClass({
 
 
 
-    componentDidMount : function(){
+    componentDidMount(){
         disappear();
     },
 
-    componentDidUpdate : function(){
+    componentDidUpdate(){
         disappear();
 
     },
@@ -118,7 +118,7 @@ export default React.createClass({
 
 
 
-getDefaultProps: function(){
+getDefaultProps(){
 
     return {gurdwarae : [
             { name: 'Sri Akal Takht', panjabi: 'ਸ੍ਰੀ ਅਕਾਲ ਤਖਾਤ', significance: '', sign:0, city: 'ਅਮ੍ਰਤਸਾਰ',
@@ -254,6 +254,24 @@ getDefaultProps: function(){
 
             <div className="ribbon right grey">
                 <a href="https://github.com/Jujhar/Gurdware-Darshan">Fork me on GitHub</a>
+                <a onClick={parent.movePage.bind(null, index+1)} 
+                    style={{color :"magenta"}}>About</a>
+            </div>
+
+
+          </div>
+      );
+    }
+
+    else if (this.state.currentStep == 99) {
+      return (
+          <div>
+            <div id="mainInfo">
+                <h1>About</h1>
+            </div>
+
+            <div>
+                About here
             </div>
 
 
@@ -262,7 +280,7 @@ getDefaultProps: function(){
     }
 
 
-    if (this.state.currentStep != 0) {
+    else if (this.state.currentStep != 0) {
 
 
         // Set colour customizations
