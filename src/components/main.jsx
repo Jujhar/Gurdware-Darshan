@@ -24,6 +24,8 @@ var Sign = React.createClass({
     componentWillMount: function() {
         if ( document.body.clientWidth > 670 ) {
             document.body.style.backgroundColor = "#ccecff";
+            console.log(this.props.bgLangar)
+            document.body.style.backgroundImage = this.props.bgLangar;
             divStyle = {
                 marginTop: 300,
                 width: '600'
@@ -218,6 +220,7 @@ getDefaultProps(){
         this.setState({lnkSchme: this.props.gurdwarae[ix-1].lnkscm});
         this.setState({galleryImgSrc: "./src/imgs/" + (ix-1) + "-gl.jpg"});
         this.setState({gallery2ImgSrc: "./src/imgs/" + (ix-1) + "-gl2.jpg"});
+        this.setState({galleryLangar: "./src/imgs/" + (ix-1) + "-l.jpg"});
 
     }
 
@@ -277,10 +280,10 @@ getDefaultProps(){
                 Was created by Jujhar and using React in later 2016 and early 2017.
                 </p><br />
 
-                <p>Gurdwara means the doorway to the Guru. It is also functions as equivalent of a Dharmsala a meeting place of spiritually inclined people and saints. The congregations of those at a Gurdwaras is equivalent to the congregation of a saint. The sikh perspective is nonexistent the Sikh means the Gnostic and in essence the entire religion was formed to stop the division of people and find a common place to live in the truth. While other people who claim authority of the truth and convert people to be their followers Guru Nanak laid his following to the one human race the one creator God. 
+                <p>Gurdwara means the doorway to the Guru. It is also functions as equivalent of a Dharmsala a meeting place of spiritually inclined people and saints. The congregations of those at a Gurdwaras is equivalent to the congregation of a saint. The sikh perspective is nonexistent the Sikh means the Gnostic and in essence the entire religion was formed to stop the division of people and find a common place to live in the truth. While other people who claim authority of the truth and convert people to be their own followers Guru Nanak laid his following to the one human race the one creator God. 
             
                 </p>
-            </div>
+            </div><br /><br />
 
             <h6>Rebabre software</h6>
 
@@ -345,7 +348,7 @@ getDefaultProps(){
               </nav>
               <img id="bk-img" className="bk-img" src={this.state.imgSrc}/><br />
               <div id="mobilesign">
-                  <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
+                  <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} bgLangar={this.state.galleryLangar} srcPng={this.state.sign} /><br />
               </div>
 
 
