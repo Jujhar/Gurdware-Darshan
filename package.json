@@ -1,7 +1,7 @@
 {
   "name": "gurdware-darshan",
-  "version": "0.0.1",
-  "description": "React + Webpack app",
+  "version": "0.1.0",
+  "description": "A glance at some cool Gurdware Sahibs",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot",

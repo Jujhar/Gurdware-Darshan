@@ -1,4 +1,4 @@
-// ਸਿੰਘ ਦਾ ਕਾਮ - 2016
+// ਸਿੰਘ ਦਾ ਕਾਮ - 2016 to 2017
 
 import React from 'react/addons';
 
@@ -221,7 +221,7 @@ getDefaultProps(){
         this.setState({galleryImgSrc: "./src/imgs/" + (ix-1) + "-gl.jpg"});
         this.setState({gallery2ImgSrc: "./src/imgs/" + (ix-1) + "-gl2.jpg"});
         this.setState({galleryLangar: "./src/imgs/" + (ix-1) + "-l.jpg"});
-
+        this.setState({galleryLangar2: "./src/imgs/" + (ix-1) + "-l2.jpg"});
     }
 
   },
@@ -250,7 +250,7 @@ getDefaultProps(){
       return (
           <div>
             <div id="mainInfo">
-                <h1>Gurdware Darshan</h1>
+                <h1 id="title">Gurdware Darshan</h1>
             </div>
 
             <Grid rows={rows} prev={this.state.prevState}/>
@@ -337,16 +337,19 @@ getDefaultProps(){
       return (
           <div className="wrapper">
               <nav id="pc">
-                <a onClick={this.movePage.bind(null, 0)}>home</a>
-                <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>↖</a>
-                <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>↪</a>
+                <a onClick={this.movePage.bind(null, 0)}>↖</a>
+                  <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>←</a>
+                  <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>→</a>
               </nav>
               <nav id="mobile" style={{zIndex : "22", opacity: "0.9"}}>
-                  <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>↖</a>
+                  <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>←</a>
                   <a id='mobilecenter' onClick={this.movePage.bind(null, 0)}>home</a>
-                  <a id='mobileright' onClick={this.movePage.bind(null, this.state.currentStep+1)}>↪</a>
+                  <a id='mobileright' onClick={this.movePage.bind(null, this.state.currentStep+1)}>→</a>
               </nav>
               <img id="bk-img" className="bk-img" src={this.state.imgSrc}/><br />
+              <img id="bk-img2" className="bk-img2" src={this.state.galleryLangar}/><br />
+              <img id="bk-img3" className="bk-img3" src={this.state.galleryLangar2}/><br />
+
               <div id="mobilesign">
                   <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} bgLangar={this.state.galleryLangar} srcPng={this.state.sign} /><br />
               </div>
@@ -354,7 +357,7 @@ getDefaultProps(){
 
               <div id="top">
                 <span className="oneThirdWidth-left txt-vert">
-                    <span style={{divStyle, backgroundColor: "#ff712b", opacity: "0.8", fontWeight:"bolder"}}>{this.state.name}</span>
+                    <span style={{divStyle, backgroundColor: "white", opacity: "0.8", fontWeight:"bolder"}}>{this.state.name}</span>
                     <div id="mobilesub"><a href={this.state.google} target="blank" style={{...linkStyle, ...divStyle, backgroundColor : "#ff712b"}}>ℹnfo</a></div>
                 </span>
 
@@ -374,7 +377,7 @@ getDefaultProps(){
               <div id="main">
                   <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br /><br />
                   <div id="mainbody">
-                    <span><a href={this.state.google} target="blank" style={{...linkStyle, ...divStyle, backgroundColor : "#ff712b"}}>
+                    <span><a href={this.state.google} target="blank" style={{...linkStyle, ...divStyle, backgroundColor : "#5b6f0d"}}>
                         <span style={{display : 'inline-block', fontSize : '1.2em'}}>ℹnfo</span></a></span>
                     <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae} srcPng={this.state.sign} /><br />
                   </div>

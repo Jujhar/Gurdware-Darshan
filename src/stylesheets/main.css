@@ -15,15 +15,20 @@
     }
 
     .homescreen-box {
-        font-family: "Helvetica";
-        font-weight: lighter;
-        border-radius: 2px;
-        margin:15px;
-        padding:30px;
-        border: #33acfe 3px solid;
-        display: inline-block;
-        width:75%;
-        text-align: center;
+         font-family: "Helvetica";
+         font-weight: lighter;
+         border-radius: 2px;
+         margin:15px;
+         padding:30px;
+         border: #33acfe 3px solid;
+         display: inline-block;
+         width:75%;
+         text-align: center;
+     }
+
+    .homescreen-box:hover {
+        cursor: pointer;
+        cursor: hand;
     }
 
     .txt-vert{
@@ -40,6 +45,10 @@
         height:500px;
         opacity: 0.01;
         z-index: -100;
+    }
+
+    #title {
+        font-family: "DejaVu Sans Mono", "fantasy";
     }
 
     #pc {
@@ -116,6 +125,24 @@
         padding-bottom:18px;
     }
 
+    .bk-img2 {
+        margin-top:15%;
+        z-index: -300;
+        width:82%;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-bottom:18px;
+    }
+
+    .bk-img3 {
+        margin-top:15%;
+        z-index: -300;
+        width:82%;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-bottom:18px;
+    }
+
     .oneThirdWidth-right img {
         width:80%;
         padding-bottom: 18px;
@@ -183,7 +210,7 @@
         padding-left: 5px;
         margin-left:-10px;
         padding-right: 5px;
-        position: default;
+        position: fixed;
         background-color: floralwhite;
         font-size: 1.8em;
     }
@@ -240,7 +267,36 @@
         max-width: 100%;
     }
 
+    .bk-img2 {
+        position: absolute;
+        z-index: -300;
+        top: 0;
+        margin-top: 80%;
+        margin-left: inherit;
+        margin-right: inherit;
+        padding: 0px;
+        left: 0;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .bk-img3 {
+        position: absolute;
+        z-index: -300;
+        top: 0;
+        margin-top: 155%;
+        margin-left: inherit;
+        margin-right: inherit;
+        padding: 0px;
+        left: 0;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+
+
     #imgsign{
+        opacity: 0.85;
         width:90%;
         margin-left: inherit;
         margin-right: inherit;
@@ -271,8 +327,9 @@
 }
 
 #homescreen-box-select {
-    opacity: 0.3;
-    background-color: deepskyblue;
+    opacity: 0.7;
+    background-color: cyan;
+    color: indigo;
     border:  solid 2px #f3e797;
 
 }
