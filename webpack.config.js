@@ -4,7 +4,6 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     app: [
-      'webpack/hot/dev-server',
       './src/index.js'
     ]
   },
@@ -33,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.jsx$/,
-        loaders: ['react-hot', 'babel'],
+        loaders: ['babel'],
         include: path.join(__dirname, 'src/components')
       },
       {

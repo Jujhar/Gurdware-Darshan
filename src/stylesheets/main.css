@@ -14,21 +14,60 @@
         opacity: 1;
     }
 
+    @keyframes pulse {
+        from {
+            transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+
+        to {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .pulse {
+        animation-name: pulse;
+    }
+
     .homescreen-box {
-         font-family: "Helvetica";
+         font-family: "DIN Alternative", "DIN", "Helvetica";
          font-weight: lighter;
          border-radius: 2px;
          margin:15px;
-         padding:30px;
-         border: #33acfe 3px solid;
+         padding:0px 30px 0px 30px;
+         border: #8894ad 3px solid;
          display: inline-block;
          width:75%;
          text-align: center;
      }
 
+    .homescreen-box-title{
+        font-family:'Lucida Grande',Lucida, sanserif;
+        color:grey;
+        font-size: 2em;
+        text-align: center;
+    }
+
     .homescreen-box:hover {
         cursor: pointer;
         cursor: hand;
+    }
+
+    .icon {
+        height:50px;
+    }
+
+    #topBar{
+        margin-left: -50px;
+        height:30px;
+        background-color: #fffbf1;
+        position: absolute;
+        top: 0px;
+        width: 130%;
+        z-index: 0;
     }
 
     .txt-vert{
@@ -51,9 +90,19 @@
         font-family: "DejaVu Sans Mono", "fantasy";
     }
 
+    nav{
+        cursor: pointer;
+        cursor: hand;
+    }
+
     #pc {
         display: none;
     }
+
+    .pcOnly {
+        display: none;
+    }
+
 
     #pcsign {
         display: none;
@@ -184,10 +233,11 @@
     .homescreen-box {
         margin:15px;
         padding:30px;
-        border: #33acfe 1px solid;
+        border: #8894ad 3px solid;
         display: inline-block;
         width:inherit;
         text-align: inherit;
+        text-align: center;
     }
 
     .nishan {
@@ -214,6 +264,11 @@
         background-color: floralwhite;
         font-size: 1.8em;
     }
+
+    .pcOnly{
+        display: inherit;
+    }
+
 
     #pcsign {
         display: default;
