@@ -78,10 +78,18 @@
         padding-left: 80px;
     }
 
+    .whiteBorder {
+        border: 2px white solid;
+    }
+
+    .greyBorder {
+        border: 2px #c9d0c5 solid;
+    }
+
     .nishan {
         position: absolute;
         top: 10px;
-        height:500px;
+        height:800px;
         opacity: 0.01;
         z-index: -100;
     }

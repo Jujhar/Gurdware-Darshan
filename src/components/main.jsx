@@ -336,6 +336,8 @@ export default React.createClass({
             this.setState({gallery2ImgSrc: "./src/imgs/" + (ix - 1) + "-gl2.jpg"});
             this.setState({galleryLangar: "./src/imgs/" + (ix - 1) + "-l.jpg"});
             this.setState({galleryLangar2: "./src/imgs/" + (ix - 1) + "-l2.jpg"});
+            this.setState({guru: this.props.gurdwarae[ix - 1].guru});
+
         }
 
     },
@@ -494,8 +496,18 @@ export default React.createClass({
 
                     <div id="top">
                 <span className="oneThirdWidth-left txt-vert">
-                    <span
-                        style={{divStyle, backgroundColor: "white", opacity: "0.8", padding: "6px", fontWeight:"bolder"}}>{this.state.name}</span>
+                    <div
+                        style={{divStyle, border: "#e1e2e1 1px solid",
+                         color:"#fff",
+                         opacity: "0.9", padding: "6px", fontWeight:"bolder"}}>
+                            {this.state.name}<br />
+
+                            <span style={{fontWeight:"normal",fontSize:"0.8em"}}>
+                                {this.state.guru} ਪਾਤਸ਼ਾਹੀ
+                            </span>
+
+                    </div>
+
                     <div id="mobilesub"><a href={this.state.google} target="blank"
                                            style={{...linkStyle, ...divStyle, backgroundColor : "#ff712b"}}>ℹnfo</a>
                     </div>
@@ -504,10 +516,12 @@ export default React.createClass({
                 <span className="oneThirdWidth-right">
                     <br />
                     <a href={this.state.galleryImgSrc} target="blank">
-                        <img src={this.state.galleryImgSrc} style={{opacity : '0.7'}}/>
+                        <img className="whiteBorder"
+                             src={this.state.galleryImgSrc} style={{opacity : '0.7'}}/>
                     </a><br />
                     <a href={this.state.gallery2ImgSrc} target="blank">
-                        <img src={this.state.gallery2ImgSrc} style={{opacity : '0.8'}}/>
+                        <img className="greyBorder"
+                             src={this.state.gallery2ImgSrc} style={{opacity : '0.8'}}/>
                     </a><br />
                 </span>
 
@@ -515,11 +529,15 @@ export default React.createClass({
                     <br />
 
                     <div id="main">
-                        <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.gif"/><br /><br />
-                        <div id="mainbody">
+                        <img className="oneThirdWidth nishan" src="./src/imgs/nishan-sahib.png"/><br /><br />
+                        <div id="mainbody" style={{width:"850px",textAlign:"center",opacity:"0.8",padding:"14px"}}>
                     <span><a href={this.state.google} target="blank"
-                             style={{...linkStyle, ...divStyle, backgroundColor : "#5b6f0d"}}>
-                        <span style={{display : 'inline-block', fontSize : '1.2em'}}>ℹnfo</span></a></span>
+                             style={{...linkStyle, ...divStyle, color: 'white'}}>
+                        <span style={{display : 'inline-block', fontSize : '1.2em',
+                        border: "2px solid #c9d0c5", opacity: "0.8"}}>
+                            <img src="./src/imgs/gs.png" style={{height:"50px"}}
+                            alt="google search"/>
+                            ਹੋਰ ਜਾਨਕਾਰੀ</span></a></span>
                             <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae}
                                   srcPng={this.state.sign}/><br />
                         </div>
