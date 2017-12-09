@@ -134,19 +134,19 @@ export default React.createClass({
                 },
                 {
                     name: 'Santokhsar Ji', panjabi: 'ਸੰਤੋਖਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ',
-                    google: 'q=santokhsar+history', instagram: '', flickr: ''
+                    google: 'q=santokhsar+history', instagram: '', flickr: '', guru: '4'
                 },
                 {
                     name: 'Bibeksar Ji', panjabi: 'ਬਿਬੇਕਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ',
-                    google: 'q=bibeksar+history', instagram: '', flickr: ''
+                    google: 'q=bibeksar+history', instagram: '', flickr: '', guru: '6'
                 },
                 {
                     name: 'Ramsar Ji', panjabi: 'ਰਾਮਸਰ ਜੀ', significance: '', city: 'ਅਮ੍ਰਤਸਾਰ',
-                    google: 'q=Gurdwara+ramsar+sarovar+history', instagram: '', flickr: '', colorscm: 1
+                    google: 'q=Gurdwara+ramsar+sarovar+history', instagram: '', flickr: '', colorscm: 1, guru: '5'
                 },
                 {
                     name: 'Kaulsar Ji', panjabi: 'ਕੌਲਸਰ ਜੀ', significance: '', city: '',
-                    google: 'q=Kaulsar+sahib', instagram: '', flickr: '', lnkscm: 1
+                    google: 'q=Kaulsar+sahib', instagram: '', flickr: '', lnkscm: 1, guru: '6'
                 },
                 {
                     name: 'Taran Tarn Ji', panjabi: 'ਤਰਨ ਤਾਰਨ ਜੀ', significance: '', city: 'ਤਰਨ ਤਾਰਨ',
