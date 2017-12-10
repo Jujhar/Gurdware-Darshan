@@ -4,5 +4,7 @@ node_modules
 npm-debug.log
 dist
 build
+build.zip
 scraps
 designer-suitcase
+
