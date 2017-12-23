@@ -351,6 +351,8 @@ export default React.createClass({
             if ((index + 1) == parent.state.prevState) {
                 return <span id="homescreen-box-select" className="homescreen-box"
                              onClick={parent.movePage.bind(null, index+1)}>
+                    <img src="./src/imgs/gurdwarasahib.png" style={{height:"70px"}}
+                         alt="Gurdwara silhouette"/><br />
                         <span className="homescreen-box-title">{row.name + ' - ' + index}
                         </span><br /><br />
                     {row.guru} Patshahi
@@ -361,7 +363,7 @@ export default React.createClass({
             return <span className="homescreen-box"
                          onClick={parent.movePage.bind(null, index+1)}>
                         <img src="./src/imgs/gurdwarasahib.png" style={{height:"70px"}}
-                            alt="Gurdwara silhouette"/><br />
+                             alt="Gurdwara silhouette"/><br />
                         <span className="homescreen-box-title">{row.name + ' - ' + (index+1)}</span><br /><br />
                 {row.guru} Patshahi
                   </span>
@@ -391,19 +393,16 @@ export default React.createClass({
                         <h1>About</h1>
                     </div>
 
-                    <h3>Gurdware Darshan</h3>
+                    <h3 style={{paddingLeft:"40px"}}>Gurdware Darshan</h3>
 
 
-                    <div style={{width:"300px"}}>
-
+                    <div id="text" style={{width:"600px"}}>
                         <p>
-                            Was created by Jujhar and using React in later 2016 and early 2017.
-                        </p><br />
-
-                        <p>Gurdwara means the doorway to the Guru. It is also functions as equivalent of a Dharmsala a
+                            Was started by Jujhar and using React in 2016.< br />< br />
+                            <i>Gurdwara</i> means the doorway to the Guru. It is also functions as equivalent of a <i>Dharmsala</i> a
                             meeting place of spiritually inclined people and saints. The congregations of those at a
                             Gurdwaras is equivalent to the congregation of a saint. The sikh perspective is nonexistent
-                            the Sikh means the Gnostic and in essence the entire religion was formed to stop the
+                            the Sikh means the <i>Gnostic</i> and in essence the entire religion was formed to stop the
                             division of people and find a common place to live in the truth. While other people who
                             claim authority of the truth and convert people to be their own followers Guru Nanak laid
                             his following to the one human race the one creator God.
@@ -412,11 +411,11 @@ export default React.createClass({
                     </div>
                     <br /><br />
 
-                    <h6>Rebabre software</h6>
+                    <h6 style={{paddingLeft:"40px"}}>Rebabre software</h6>
 
                     <div className="ribbon right grey">
                         <a onClick={this.movePage.bind(null, 0)}>Back</a>
-                        <a href="https://github.com/Jujhar/Gurdware-Darshan">Fork me on GitHub</a>
+                        <a href="https://github.com/Jujhar/Gurdware-Darshan" target="blank">Fork me on GitHub</a>
                     </div>
 
 
@@ -500,7 +499,7 @@ export default React.createClass({
                         style={{divStyle, border: "#e1e2e1 1px solid",
                          color:"#fff",
                          opacity: "0.9", padding: "6px", fontWeight:"bolder"}}>
-                            {this.state.name}<br />
+                        {this.state.name}<br />
 
                             <span style={{fontWeight:"normal",fontSize:"0.8em"}}>
                                 {this.state.guru} ਪਾਤਸ਼ਾਹੀ
@@ -536,7 +535,7 @@ export default React.createClass({
                         <span style={{display : 'inline-block', fontSize : '1.2em',
                         border: "2px solid #c9d0c5", opacity: "0.8"}}>
                             <img src="./src/imgs/gs.png" style={{height:"50px"}}
-                            alt="google search"/>
+                                 alt="google search"/>
                             ਹੋਰ ਜਾਨਕਾਰੀ</span></a></span>
                             <Sign idx={this.state.currentStep} gurdwarae={this.props.gurdwarae}
                                   srcPng={this.state.sign}/><br />

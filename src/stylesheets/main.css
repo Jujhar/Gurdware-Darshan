@@ -1,12 +1,12 @@
 @media screen and (min-width: 100px) {
     #mainInfo {
-    font-family: "Arial Black";
-    border: solid 33px white;
-    position: absolute;
-    top:10px;
-    width:90%;
-    margin-left: 0%;
-    font-size: 1.7em;
+        font-family: "Arial Black";
+        border: solid 33px white;
+        position: absolute;
+        top: 10px;
+        width: 90%;
+        margin-left: 0%;
+        font-size: 1.7em;
         -webkit-transition: opacity 3s ease-in-out;
         -moz-transition: opacity 3s ease-in-out;
         -ms-transition: opacity 3s ease-in-out;
@@ -33,21 +33,26 @@
     }
 
     .homescreen-box {
-         font-family: "DIN Alternative", "DIN", "Helvetica";
-         font-weight: lighter;
-         border-radius: 2px;
-         margin:15px;
-         padding:0px 30px 0px 30px;
-         border: #8894ad 3px solid;
-         display: inline-block;
-         width:75%;
-         text-align: center;
-     }
+        font-family: "DIN Alternative", "DIN", "Helvetica";
+        font-size: 0.8em;
+        font-weight: lighter;
+        border-radius: 2px;
+        margin: 15px;
+        padding: 0px 30px 0px 30px;
+        border: #8894ad 3px solid;
+        display: inline-block;
+        width: 75%;
+        text-align: center;
+    }
 
-    .homescreen-box-title{
-        font-family:'Lucida Grande',Lucida, sanserif;
-        color:grey;
-        font-size: 2em;
+    #text {
+        font-size: 1.3em; padding-left: 40px;
+    }
+
+    .homescreen-box-title {
+        font-family: 'Lucida Grande', Lucida, sanserif;
+        color: grey;
+        font-size: 1.6em;
         text-align: center;
     }
 
@@ -57,12 +62,12 @@
     }
 
     .icon {
-        height:50px;
+        height: 50px;
     }
 
-    #topBar{
+    #topBar {
         margin-left: -50px;
-        height:30px;
+        height: 30px;
         background-color: #fffbf1;
         position: absolute;
         top: 0px;
@@ -70,7 +75,7 @@
         z-index: 0;
     }
 
-    .txt-vert{
+    .txt-vert {
         font-size: 3em;
         #writing-mode: vertical-lr;
         text-orientation: upright;
@@ -89,7 +94,7 @@
     .nishan {
         position: absolute;
         top: 10px;
-        height:800px;
+        height: 800px;
         opacity: 0.01;
         z-index: -100;
     }
@@ -98,7 +103,7 @@
         font-family: "DejaVu Sans Mono", "fantasy";
     }
 
-    nav{
+    nav {
         cursor: pointer;
         cursor: hand;
     }
@@ -111,7 +116,6 @@
         display: none;
     }
 
-
     #pcsign {
         display: none;
     }
@@ -120,20 +124,20 @@
         display: default;
         padding-left: 5px;
         padding-right: 5px;
-        padding-top:12px;
+        padding-top: 12px;
         position: fixed;
-        left:0px;
+        left: 0px;
         bottom: 0px;
         background-color: floralwhite;
         font-family: Seravek;
         font-size: 1.8em;
-        width:100%;
-        height:50px;
+        width: 100%;
+        height: 50px;
     }
 
     #mobileleft {
         position: fixed;
-        left:0px;
+        left: 0px;
         bottom: 0px;
     }
 
@@ -145,7 +149,7 @@
 
     #mobileright {
         position: fixed;
-        right:15px;
+        right: 15px;
         bottom: 0px;
         font-weight: bold;
     }
@@ -156,17 +160,17 @@
 
     .oneThirdWidth-left {
         position: absolute;
-        top:3%;
-        width:65%;
+        top: 3%;
+        width: 65%;
     }
 
     #mainbody {
-        display:none;
-        width:99%;
+        display: none;
+        width: 99%;
         text-align: center;
         position: absolute;
-        top:9%;
-        width:100px;
+        top: 9%;
+        width: 100px;
         z-index: 30;
         text-align: left;
         margin-left: auto;
@@ -174,48 +178,48 @@
     }
 
     .bk-img {
-        margin-top:130px;
+        margin-top: 130px;
         z-index: -300;
-        width:82%;
+        width: 82%;
         margin-left: 40px;
         margin-right: 40px;
-        padding-bottom:18px;
+        padding-bottom: 18px;
     }
 
     .bk-img2 {
-        margin-top:15%;
+        margin-top: 15%;
         z-index: -300;
-        width:82%;
+        width: 82%;
         margin-left: 40px;
         margin-right: 40px;
-        padding-bottom:18px;
+        padding-bottom: 18px;
     }
 
     .bk-img3 {
-        margin-top:15%;
+        margin-top: 15%;
         z-index: -300;
-        width:82%;
+        width: 82%;
         margin-left: 40px;
         margin-right: 40px;
-        padding-bottom:18px;
+        padding-bottom: 18px;
     }
 
     .oneThirdWidth-right img {
-        width:80%;
+        width: 80%;
         padding-bottom: 18px;
         margin-left: 40px;
         margin-right: 40px;
     }
 
-    #imgsign{
-        width:82%;
+    #imgsign {
+        width: 82%;
         margin-left: 40px;
         margin-right: 40px;
     }
 
     .oneThirdWidth-right {
         position: default;
-        width:100%;
+        width: 100%;
     }
 
     #mobilesub {
@@ -234,29 +238,29 @@
         position: absolute;
         top: 40%;
         margin-left: 40%;
-        width:400px;
+        width: 400px;
         font-size: inherit;
     }
 
     .homescreen-box {
-        margin:15px;
-        padding:30px;
+        margin: 15px;
+        padding: 30px;
         border: #8894ad 3px solid;
         display: inline-block;
-        width:inherit;
+        width: inherit;
         text-align: inherit;
         text-align: center;
     }
 
     .nishan {
         position: static;
-        height:152px;
-        width:92px;
+        height: 152px;
+        width: 92px;
         opacity: 1;
     }
 
-    .txt-vert{
-        position:relative;
+    .txt-vert {
+        position: relative;
         z-index: 10;
         font-size: 3em;
         #writing-mode: vertical-lr;
@@ -268,7 +272,7 @@
     #pc {
         display: inline-block;
         padding-left: 5px;
-        margin-left:-10px;
+        margin-left: -10px;
         padding-right: 5px;
         position: fixed;
         z-index: 60;
@@ -276,10 +280,9 @@
         font-size: 1.8em;
     }
 
-    .pcOnly{
+    .pcOnly {
         display: inherit;
     }
-
 
     #pcsign {
         display: default;
@@ -295,9 +298,9 @@
 
     .oneThirdWidth-left {
         position: absolute;
-        left:0px;
-        top:15%;
-        width:30%;
+        left: 0px;
+        top: 15%;
+        width: 30%;
     }
 
     #mainbody {
@@ -305,8 +308,8 @@
 
         text-align: default;
         position: inherit;
-        top:default;
-        width:100px;
+        top: default;
+        width: 100px;
         z-index: 30;
         text-align: left;
         margin-left: auto;
@@ -314,7 +317,7 @@
     }
 
     .oneThirdWidth-right img {
-        width:250px;
+        width: 250px;
         padding-bottom: 0px;
         margin-left: inherit;
         margin-right: inherit;
@@ -359,20 +362,18 @@
         max-width: 100%;
     }
 
-
-
-    #imgsign{
+    #imgsign {
         opacity: 0.85;
-        width:90%;
+        width: 90%;
         margin-left: inherit;
         margin-right: inherit;
     }
 
     .oneThirdWidth-right {
         position: absolute;
-        right:0px;
-        top:15%;
-        width:30%;
+        right: 0px;
+        top: 15%;
+        width: 30%;
     }
 
     #mobilesub {
@@ -380,6 +381,8 @@
     }
 
     .ribbon {
+        cursor: pointer;
+        cursor: hand;
         display: inherit;
     }
 
@@ -394,9 +397,9 @@
 
 #homescreen-box-select {
     opacity: 0.7;
-    background-color: cyan;
+    background-color: gold;
     color: indigo;
-    border:  solid 2px #f3e797;
+    border: solid 2px black;
 
 }
 
@@ -413,7 +416,7 @@
 }
 
 nav a {
-    margin-left:3px;
+    margin-left: 3px;
 }
 
 
