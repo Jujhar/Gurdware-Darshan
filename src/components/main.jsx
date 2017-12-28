@@ -467,10 +467,12 @@ export default React.createClass({
                         <a onClick={this.movePage.bind(null, 0)}>
                             <img src="./src/imgs/home.png" alt="up" className="icon"/>
                         </a>
-                        <a onClick={this.movePage.bind(null, this.state.currentStep-1)}>
+                        <a onClick={this.movePage.bind(null, this.state.currentStep-1)}
+                        href="#">
                             <img src="./src/imgs/left.png" alt="left" className="icon"/>
                         </a>
-                        <a onClick={this.movePage.bind(null, this.state.currentStep+1)}>
+                        <a onClick={this.movePage.bind(null, this.state.currentStep+1)}
+                        href="#">
                             <img src="./src/imgs/right.png" alt="right" className="icon"/>
                         </a>
                     </nav>
